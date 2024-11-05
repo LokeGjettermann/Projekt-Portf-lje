@@ -1,26 +1,108 @@
-@charset "utf-8";
-/* CSS Document */
+@charset "utf-8"; /* Angiver at CSS-filen bruger UTF-8 tegnsæt */
 
 body {
-  background-color: rgba(232, 230, 223, 1);
+    background-color: rgba(232, 230, 223, 1); /* Baggrundsfarve for hele siden */
+    margin: 0; /* Fjern standard marginer */
+}
+
+h1 {
+    display: flex; /* Brug flexbox til at justere overskrifts sektionerne */
+    justify-content: space-between; /* Placerer sektionerne med plads imellem */
+    align-items: center; /* Sikrer, at alle elementer er centreret vertikalt */
+    position: fixed; /* Gør overskriften fast i toppen af siden */
+    top: 0; /* Placerer den i toppen af vinduet */
+    left: 0; /* Justerer til venstre */
+    right: 0; /* Justerer til højre */
+    background-color: transparent; /* Gør baggrunden gennemsigtig */
+    z-index: 1000; /* Sørger for, at overskriften er ovenpå alt andet indhold */
+    padding: 10px; /* Tilføj padding for bedre afstand */
 }
 
 #left {
-    float: left;
-    text-align: left;
-    padding-right: 0px;
-	padding-top: 0px;
+    display: flex; /* Brug flexbox til at arrangere links */
+    gap: 20px; /* Tilføjer mellemrum mellem elementerne */
+    padding-top: 5px; /* Optional padding for lidt ekstra plads */
 }
 
-#center {
-    text-align: center;
-	padding-top: 0px;
+.image-container {
+    display: flex; /* Brug flexbox til at arrangere billederne */
+    justify-content: center; /* Centrerer indholdet i containeren */
+    margin: 80px 0; /* Øg marginen over for at give plads til den faste h1 */
 }
 
-#right {
-    float: right;
-    text-align: right;
-    padding-left: 0px;
-	padding-top: 0px;
+.image-left {
+    margin-right: 5px; /* Flytter billede 1 lidt tættere på billede 2 */
 }
 
+.image-center {
+    margin: 0; /* Ingen margin for at sikre centreret position */
+}
+
+.text-image-container {
+    display: flex; /* Brug flexbox til at arrangere teksten og billede 3 */
+    align-items: center; /* Justerer indholdet i midten af containeren */
+    justify-content: center; /* Centrerer indholdet i denne container */
+    margin-top: 20px; /* Margin ovenfor for afstand fra de andre billeder */
+}
+
+.image-right {
+    margin-left: 10px; /* Mindre margin til venstre for billede 3 */
+}
+
+.text-container {
+    max-width: 600px; /* Begræns bredden af tekstblokken */
+    text-align: center; /* Centrerer teksten */
+    margin-right: 5px; /* Flytter teksten tættere på billede 3 */
+}
+
+/* Nye stilarter for small og large */
+.small {
+    font-size: 14px; /* Mindre skriftstørrelse for small */
+}
+
+.large {
+    font-size: 32px; /* Større skriftstørrelse for large */
+}
+
+/* Stilarter for About Me overskriften */
+.about-me {
+    text-align: center; /* Centrerer overskriften */
+    font-size: 24px; /* Skriftstørrelse for overskriften */
+    margin: 20px 0; /* Margin over og under overskriften */
+}
+
+/* Stilarer for Portfolio overskriften */
+.portfolio-title {
+    text-align: center; /* Centrerer overskriften */
+    font-size: 24px; /* Skriftstørrelse for overskriften */
+    margin: 40px 0; /* Margin over og under overskriften */
+}
+
+/* Ny container til små billeder */
+.small-images-container {
+    display: flex; /* Brug flexbox til at arrangere små billeder */
+    justify-content: center; /* Centrerer billederne */
+    margin-top: -10px; /* Ryk containeren lidt opad */
+}
+
+/* Stilarter for små billeder */
+.small-image {
+    width: 70px; /* Sætter bredden til 70 pixels */
+    height: auto; /* Beholder proportionerne af billederne */
+    margin: 0 10px; /* Tilføj mellemrum mellem billederne */
+}
+
+/* Stilarter for knapper */
+.button {
+    text-decoration: none; /* Fjern understregning fra linket */
+    background-color: #4CAF50; /* Grønn farve */
+    color: white; /* Hvid tekst */
+    padding: 10px 20px; /* Indvendig afstand */
+    border-radius: 5px; /* Runde kanter */
+    font-size: 14px; /* Skriftstørrelse */
+    transition: background-color 0.3s; /* Tilføj overgangseffekt */
+}
+
+.button:hover {
+    background-color: #45a049; /* Mørkere grøn ved hover */
+}
