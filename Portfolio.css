@@ -89,7 +89,7 @@ h1 {
 .small-image {
     width: 70px; /* Sætter bredden til 70 pixels */
     height: auto; /* Beholder proportionerne af billederne */
-    margin: 0 10px; /* Tilføj mellemrum mellem billederne */
+    margin: 0 30px; /* Tilføj mellemrum mellem billederne */
 }
 
 /* Stilarter for knapper */
@@ -105,4 +105,23 @@ h1 {
 
 .button:hover {
     background-color: #45a049; /* Mørkere grøn ved hover */
+}
+
+/* Portfolio item layout */
+.portfolio-item {
+    display: flex; /* Brug flexbox til at placere billedet og teksten side om side */
+    align-items: center; /* Justerer elementerne vertikalt på linje */
+    justify-content: center; /* Centrerer containerens indhold */
+    margin-bottom: 40px; /* Tilføjer lidt ekstra margin under sektionen */
+}
+
+.portfolio-item img {
+    width: 400px; /* Juster størrelsen af billedet */
+    height: auto; /* Bevarer billedets proportioner */
+    margin-left: 20px; /* Tilføjer lidt mellemrum mellem teksten og billedet */
+}
+
+.portfolio-item p {
+    max-width: 400px; /* Begræns bredden af tekstblokken */
+    text-align: center; /* Centrerer teksten */
 }
